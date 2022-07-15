@@ -28,12 +28,21 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
-
+            Bird pigeons = new Bird();
+            pigeons.CanFly = true;
+            pigeons.WingSpan = 26.4;
+            pigeons.Size = "small";
+            pigeons.FavoriteFood = "everything";
+            Console.WriteLine($"A {pigeons} is {pigeons.Size}. It has a wingspan of {pigeons.WingSpan} inches and love to eat {pigeons.FavoriteFood}.");
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+            Reptile turtle = new Reptile() { NumberOfLegs = 4, HasShell = true, HasTail = true, Weight = 110};
+            Console.WriteLine($"{turtle} has {turtle.NumberOfLegs} legs and weight around {turtle.Weight} pounds");
+            Console.WriteLine($"Does a turle have a shell? {turtle.HasShell}");
+            Console.WriteLine($"Does a turle have a tail? {turtle.HasTail}");
         }
     }
 }
