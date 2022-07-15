@@ -29,20 +29,27 @@ namespace Inheritance
              * Creatively display the class member values 
              */
             Bird pigeons = new Bird();
+            pigeons.NumberOfLegs = 4;
             pigeons.CanFly = true;
-            pigeons.WingSpan = 26.4;
+            pigeons.HasTail = true;
             pigeons.Size = "small";
+            pigeons.WingSpan = 26.4;
+            pigeons.TypeOfBird = "pigeon";
             pigeons.FavoriteFood = "everything";
-            Console.WriteLine($"A {pigeons} is {pigeons.Size}. It has a wingspan of {pigeons.WingSpan} inches and love to eat {pigeons.FavoriteFood}.");
+            Console.WriteLine($"A {pigeons.TypeOfBird} is {pigeons.Size} with {pigeons.NumberOfLegs}. It has a wingspan of {pigeons.WingSpan} inches and love to eat {pigeons.FavoriteFood}.");
+            Console.WriteLine($"Can a pigeons fly? {pigeons.CanFly}");
+            Console.WriteLine($"Does a pigeons have a tail? {pigeons.HasTail}");
+            Console.WriteLine("-------------------------------");
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
-            Reptile turtle = new Reptile() { NumberOfLegs = 4, HasShell = true, HasTail = true, Weight = 110};
-            Console.WriteLine($"{turtle} has {turtle.NumberOfLegs} legs and weight around {turtle.Weight} pounds");
+            Reptile turtle = new Reptile() { NumberOfLegs = 4, HasShell = true, HasTail = true, Weight = 110, CanFly = false, Size = "medium", Color = "Dark Brown", NumberOfTeeth = 0};
+            Console.WriteLine($"A Turtle has {turtle.NumberOfLegs} legs, has {turtle.NumberOfTeeth} teeth, has a color of {turtle.Color}, is usally {turtle.Size} size and weight around {turtle.Weight} pounds.");
             Console.WriteLine($"Does a turle have a shell? {turtle.HasShell}");
             Console.WriteLine($"Does a turle have a tail? {turtle.HasTail}");
+            Console.WriteLine($"Can a turtle fly? {turtle.CanFly}");
         }
     }
 }
